@@ -5,7 +5,7 @@ FROM cloudgear/build-deps:14.04
 # ENV REALLY_GEM_UPDATE_SYSTEM 1
 
 RUN apt-get update -q && \
-    apt-get install ruby2.0 && \
+    apt-get install ruby2.0 -q -y && \
 
     rm /usr/bin/ruby /usr/bin/gem /usr/bin/irb /usr/bin/rdoc /usr/bin/erb && \
     ln -s /usr/bin/ruby2.0 /usr/bin/ruby && \
